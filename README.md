@@ -21,7 +21,7 @@ The portfolio itself is responsive and aims for accessibility and visual clarity
 
 ## Screenshot
 
-Here is a preview of my ![Portfolio Screenshot](./ScreenshotPortfolio.png].
+Here is a preview of my Portfolio: ![](./ScreenshotPortfolio.png).
 
 ## Links
 
