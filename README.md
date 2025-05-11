@@ -7,30 +7,30 @@ The portfolio itself is responsive and aims for accessibility and visual clarity
 ## Table of Contents
 
 - [Overview](#overview)
-- [Screenshot](#screenshot)
-- [Links](#links)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
 - [My Process](#my-process)
-- [Built With](#built-with)
-- [What I Learned](#what-i-learned)
-- [Continued Development](#continued-development)
-- [Useful Resources](#useful-resources)
+  - [Built With](#built-with)
+  - [What I Learned](#what-i-learned)
+  - [Continued Development](#continued-development)
+  - [Useful Resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-## Screenshot
+### Screenshot
 
 Here is a preview of my Portfolio: ![](./ScreenshotPortfolio.png).
 
-## Links
+### Links
 
 - **Live Site URL on GitHub**: (https://paloma-cardozo.github.io/dev-portfolio/)
 - **Repository URL**: (https://github.com/Paloma-Cardozo/dev-portfolio)
 
 ## My Process
 
-## Built With
+### Built With
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -38,21 +38,21 @@ Here is a preview of my Portfolio: ![](./ScreenshotPortfolio.png).
 - Media queries
 - Git and GitHub
 
-## What I Learned
+### What I Learned
 
 Creating this portfolio taught me how to:
 - Organize a multi-section layout using clean HTML and reusable CSS.
 - Ensure accessibility through semantic elements and proper structure.
 - Manage responsiveness with media queries.
 
-## Continued Development
+### Continued Development
 
 - Adding light/dark mode toggle.
 - Enhancing animations and interactivity using JavaScript.
 - Improving accessibility with more detailed testing and adjustments.
 - Expanding the site to include blog posts and technical writing samples.
 
-## Useful Resources
+### Useful Resources
 
 - [MDN Web Docs](https://developer.mozilla.org/) – For all things HTML, CSS, and accessibility.
 - [CSS Tricks](https://css-tricks.com/) – Especially helpful for Flexbox and layout inspiration.
