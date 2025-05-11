@@ -1,7 +1,20 @@
+:root {
+    --clr-bg: hsl(40, 60%, 96%);
+    --clr-bg-hover: hsl(40, 60%, 92%);
+    --clr-header-main: hsl(20, 30%, 40%);
+    --clr-header-sub: hsl(15, 50%, 60%);
+    --clr-text: hsl(30, 20%, 30%);
+    --clr-button: hsl(25, 35%, 50%);
+    --clr-button-hover: hsl(25, 35%, 35%);
+    --clr-border-img: hsl(20, 30%, 60%);
+    --clr-shadow: rgba(120, 100, 90, 0.1);
+    --font-main: "Quicksand", sans-serif;
+}
+
 /* General Styles */
 body {
-    font-family: "Sour Gummy", sans-serif;
-    background-color: hsl(210, 60%, 98%);
+    font-family: var(--font-main);
+    background-color: var(--clr-bg);
 }
 
 /* Styles for the header */
@@ -11,23 +24,23 @@ header {
 
 header h1 {
     font-size: 5rem;
-    color: hsl(220, 35%, 60%);
+    color: var(--clr-header-main);
     margin-top: 1rem;
     margin-bottom: 0.5rem;
-    text-shadow: 1px 1px 2px rgba(100, 120, 150, 0.1);
+    text-shadow: 1px 1px 2px var(--clr-shadow);
 }
 
 header h2 {
     font-size: 3rem;
-    color: hsl(340, 50%, 75%);
-    text-shadow: 1px 1px 2px rgba(100, 120, 150, 0.1);
+    color: var(--clr-header-sub);
+    text-shadow: 1px 1px 2px var(--clr-shadow);
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
 header p {
     font-size: 1.5rem;
-    color: hsl(220, 40%, 25%);
+    color: var(--clr-text);
     margin: 1.5rem 0;
 }
 
@@ -48,7 +61,7 @@ main {
     background-color: white;
     padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: 8px 8px 8px rgba(160, 180, 200, 0.2);
+    box-shadow: 8px 8px 8px var(--clr-shadow);
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
@@ -57,7 +70,7 @@ main {
 .card:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease, background-color 0.3s ease;
-    background-color: hsl(210, 60%, 96%); 
+    background-color: var(--clr-bg-hover); 
 }
 
 .card img {
@@ -65,22 +78,22 @@ main {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid hsl(340, 50%, 75%);
+    border: 3px solid var(--clr-border-img);
 }
 
 .card-content h3 {
     margin-top: 0;
     font-size: 1.5rem;
-    color: hsl(220, 40%, 25%);
+    color: var(--clr-text);
 }
 
 .card-content p {
-    color: hsl(220, 40%, 25%);
+    color: var(--clr-text);
     margin: 1rem 0;
 }
 
 .btn {
-    background-color: hsl(220, 35%, 60%);
+    background-color: var(--clr-button);
     color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;    
@@ -91,7 +104,7 @@ main {
 }
 
 .btn:hover {
-    background-color: hsl(220, 30%, 40%);
+    background-color: var(--clr-button-hover);
 }
 
 /* Styles for the footer */
@@ -103,7 +116,7 @@ footer {
 }
 
 footer a {
-    color: hsl(220, 40%, 25%);
+    color: var(--clr-header-sub);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
@@ -111,7 +124,7 @@ footer a {
 }
 
 footer a:hover {
-    color: hsl(220, 35%, 45%);
+    color: var(--clr-button-hover);
 } 
 
 @media (max-width: 600px) {
