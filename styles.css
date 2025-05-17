@@ -4,6 +4,8 @@
     --clr-bg:hsl(47, 43%, 96%);
     --clr-bg-hover: hsl(33, 37%, 91%);
     --clr-bg-dark: hsl(0, 0%, 18%);
+    --clr-card-dark: hsl(0, 0%, 13%);
+    --clr-card-light: hsl(0, 0%, 10%);
     --clr-text: hsl(0, 0%, 24%);
     --clr-text-light: hsl(0, 0%, 96%);
     --clr-accent: hsl(31, 42%, 59%);
@@ -63,7 +65,7 @@ img {
 }
 
 #contact {
-    margin: 2rem;
+    margin: 1rem;
 }
 
 #loader {
@@ -115,8 +117,8 @@ header p {
 footer {
     text-align: center;
     font-size: 1rem;
-    margin: 2rem;
-    padding: 2rem 1rem; 
+    margin: 1rem;
+    padding: 1rem; 
 }
 
 footer a {
@@ -212,13 +214,13 @@ footer a:hover {
 
 .overlay-esg {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 1rem;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     color: var(--clr-text-light);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     text-align: center;
     opacity: 0;
@@ -227,7 +229,7 @@ footer a:hover {
     font-style: italic;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
 }
 
 .card:hover .overlay-esg {
@@ -242,9 +244,10 @@ footer a:hover {
 }
 
 .dark-mode .card {  
-    background-color: var(--clr-bg-dark);
+    background-color: var(--clr-card-dark);
     color: var(--clr-text-light);
-    box-shadow: 0 4px 20px var(--clr-shadow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--clr-border);
 }
 
 .dark-mode footer a,
@@ -264,6 +267,12 @@ footer a:hover {
 
 .dark-mode button:hover {
     background-color: var(--clr-accent-hover);
+}
+
+.dark-mode header h1,
+.dark-mode header h2,
+.dark-mode header p {
+  color: var(--clr-text-light);
 }
 
 /* Form styles */
@@ -297,7 +306,6 @@ input.error {
 .form-message {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    font-weight: bold;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
 }
@@ -533,6 +541,40 @@ blockquote {
         left: 70%;
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 801px) {
+    #contact form {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #contact label {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    #user_email {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    #contact button {
+        flex-shrink: 0;
+        padding: 0.6rem 1.2rem;
+    }
+
+    #form-message {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    #contact h2 {
+        margin-bottom: 1rem;
     }
 }
 
