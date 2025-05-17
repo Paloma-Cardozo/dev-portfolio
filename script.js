@@ -93,7 +93,7 @@ if (form) {
     formMessage.textContent = "Sending...";
     formMessage.className = "form-message";
 
-    emailjs.sendForm("service_4ufaptz", "template_cgeobrl", this, "user_TU7wzo1PceJ0EwbGC")
+    emailjs.sendForm("service_4ufaptz", "template_cgeobrl", this, "TU7wzo1PceJ0EwbGC")
     .then(() => {
       formMessage.textContent = "Thank you! Your message has been sent!";
       formMessage.className = "form-message success";
