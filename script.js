@@ -11,21 +11,21 @@ const projects = [
     description: "A responsive component challenge from Front-End Mentor. Built with HTML and CSS, it displays a QR code that leads to the Front-End Mentor site. This small project helped reinforce layout techniques, typography, and attention to detail.",
     link: "https://paloma-cardozo.github.io/QR-code-component/",
     image: "./Screenshot-QR.png",
-    esgMessage: "Digital solutions = lower footprint. Paperless, clean and smart."
+    esgMessage: "Less ink. More impact. A tiny square with a big footprint reducer."
   },
   {
     title: "SmartMatch",
     description: "A playful and dynamic matching app built with HTML, CSS and JavaScript. It randomly pairs students with teachers —perfect for classroom activities or team exercises. Designed with clean UI, fun colors and responsive layout.",
     link: "https://paloma-cardozo.github.io/SmartMatch/",
     image: "./ScreenshotMatch.png",
-    esgMessage: "We grow stronger when we grow together. Inclusion makes us all thrive."
+    esgMessage: "Random pairing, real inclusion. Let diversity guide discovery."
   },
   {
     title: "Menu App",
     description: "A dynamic web menu that displays dishes by category: meat, vegetarian, and desserts. Users can filter items using interactive buttons. Built with HTML, CSS, and JavaScript.",
     link: "https://paloma-cardozo.github.io/Menu/",
     image: "./ScreenshotMenu.png",
-    esgMessage: "Designing to reduce food waste. Every line of code counts."
+    esgMessage: "Small choices, big impact. Preventing food waste starts with awareness."
   }
 ];
 
@@ -72,10 +72,11 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-if (emailInput && emailError) {
+if (emailInput) {
   emailInput.addEventListener("input", () => {
-    const emailValue = emailInput.value;
-    emailError.textContent = isValidEmail(emailValue) ? "" : "Please enter a valid email address.";
+    emailError.textContent = isValidEmail(emailInput.value) 
+    ? "" 
+    : "Please enter a valid email address.";
   });
 }
 
@@ -84,26 +85,25 @@ if (form) {
     e.preventDefault();
 
     const emailValue = emailInput?.value || "";
-
-    if (!navigator.onLine) {
-      showMessage("You appear to be offline. Please check your internet connection.", "error");
-      return;
-    }
-
     if (!isValidEmail(emailValue)) {
       emailError.textContent = "Please enter a valid email address.";
       return;
     }
 
-    emailjs.sendForm("service_4ufaptz", "template_cgeobrl", this, "YgjWmdrwyiQFs4zdQL")
+    formMessage.textContent = "Sending...";
+    formMessage.className = "form-message";
+
+    emailjs.sendForm("service_4ufaptz", "template_cgeobrl", this, "gjWmdrwyiQFs4zdQL")
     .then(() => {
-      showMessage("Thank you! Your message has been sent!", "success");
+      formMessage.textContent = "Thank you! Your message has been sent!";
+      formMessage.className = "form-message success";
       form.reset();
     })
 
     .catch(error => {
-      showMessage("Oops! Something went wrong. Please try again later.", "error");
       console.error("EmailJS error:", error);
+        formMessage.textContent = "Oops! Something went wrong. Please try again later.";
+        formMessage.className = "form-message error";
     });
   });
 }
