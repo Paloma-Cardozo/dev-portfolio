@@ -334,8 +334,8 @@ button:active {
 
 #enterBtn {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 10%;
+    left: 70%;
     padding: 0.75rem 1.5rem;
     border-radius: 1rem;
     z-index: 10;
@@ -345,8 +345,8 @@ button:active {
     border: 1px solid var(--clr-border);
     opacity: 0;
     pointer-events: none;
-    animation: fadeIn 2s ease forwards;
-    animation-delay: 5s;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 2.5s;
     color: var(--clr-bg);
     cursor: pointer;
     max-width: 80%;
@@ -529,8 +529,8 @@ blockquote {
     }
 
     #enterBtn {
-        bottom: 1rem;
-        right: 1rem;
+        bottom: 10%;
+        left: 70%;
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
